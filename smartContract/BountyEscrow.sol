@@ -1,44 +1,7 @@
-// ### 🧠 Challenge 10 — *"BountyEscrow"*
-
-// **Level**: Intermediate
-// **Category**: Escrow, Withdraw pattern, Roles
-// **Focus**: Access control, payout logic, vault management
-
-// ---
-
 // ### 📋 Problem Statement:
 
 // You're building a `BountyEscrow` contract to manage bounty payments. A `client` funds the contract and assigns a `hunter`. The hunter can only withdraw if the client releases the bounty.
 
-// ---
-
-// ### 🛠️ Functional Requirements:
-
-// ---
-
-// ---
-
-// ---
-
-// ---
-
-// ### 🔐 Constraints:
-
-// * Must prevent reentrancy.
-// * Only one withdrawal is allowed.
-// * Handle ETH transfers safely.
-
-// ---
-
-// ### 🧠 Design Hints:
-
-// * Track `bountyReleased` and `bountyClaimed` using bool flags.
-// * Use `require()` to enforce access control.
-// * Avoid double-withdrawal or misuse.
-
-// ---
-
-// Reply with `✅ done` when you've completed it. I'll review and send the next challenge.
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
