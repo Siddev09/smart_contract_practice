@@ -70,7 +70,6 @@ contract TimeLockedAirdrop is ReentrancyGuard {
         require(token.transfer(owner, balance), "Transfer failed");
     }
 
-    // Optional: Add batch registration
     function batchRegisterUsers(address[] calldata addresses, uint256[] calldata amounts, uint256[] calldata unlockTimes) external onlyOwner {
         require(addresses.length == amounts.length && amounts.length == unlockTimes.length, "Array length mismatch");
 
