@@ -1,9 +1,5 @@
-// ### 📝 Problem Statement
-
 // You're tasked with building the **on-chain contract** for a **one-way token bridge**. Assume there's an off-chain relayer that reads and submits proofs.
 
-
-// ---
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
