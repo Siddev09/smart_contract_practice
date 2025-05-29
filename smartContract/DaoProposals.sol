@@ -4,9 +4,7 @@ pragma solidity ^0.8.13;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract MiniDAO {
-    // =========================
-    // ======= STORAGE =========
-    // =========================
+
 
     IERC20 public governanceToken;
     uint public constant MIN_TOKENS_TO_PROPOSE = 100 * 1e18;
@@ -26,34 +24,24 @@ contract MiniDAO {
 
     mapping(uint => mapping(address => bool)) public hasVoted;
 
-    // =========================
-    // ======= EVENTS ==========
-    // =========================
+   
 
     event ProposalCreated(uint indexed id, string description, uint voteStart, uint voteEnd);
     event Voted(uint indexed proposalId, address indexed voter, bool support, uint weight);
     event ProposalExecuted(uint indexed proposalId);
 
-    // =========================
-    // ======= INIT ============
-    // =========================
+
 
     constructor(address _tokenAddress) {
         governanceToken = IERC20(_tokenAddress);
     }
 
-    // =========================
-    // ======= MODIFIERS =======
-    // =========================
 
     modifier onlyTokenHolders(uint minBalance) {
         require(governanceToken.balanceOf(msg.sender) >= minBalance, "Not enough tokens");
         _;
     }
 
-    // =========================
-    // ======= FUNCTIONS =======
-    // =========================
 
     /// @notice Create a new proposal
     function createProposal(string calldata description, uint duration)
@@ -121,9 +109,7 @@ contract MiniDAO {
         emit ProposalExecuted(proposalId);
     }
 
-    // =========================
-    // ======= HELPERS =========
-    // =========================
+ 
 
     function _getProposal(uint id) internal view returns (Proposal storage) {
         require(id < proposals.length, "Invalid proposal ID");
