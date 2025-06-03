@@ -1,39 +1,6 @@
 // **Scenario:**
 // You are implementing a DAO voting system where users holding governance tokens can vote on proposals.
 
-// ---
-
-// ### ✅ Specs
-
-// #### 2. `vote(uint256 proposalId, bool support)`
-
-// * Only during the voting period.
-// * Each address can vote only once per proposal.
-// * Votes are weighted by their token balance **at the time of voting**.
-
-// #### 3. `execute(uint256 proposalId)`
-
-// * Only after the voting period ends.
-// * Can be executed only once.
-// * Marks `executed = true`
-// * If `votesFor > votesAgainst`, marks it as **passed** (use event).
-// * Does not perform any actual function execution — just vote tallying.
-
-// ---
-
-// ### 🔒 Constraints
-
-// * Use `IERC20` for token balance checks.
-// * Prevent double voting.
-// * Enforce deadlines strictly.
-// * Prevent re-execution.
-// * Ensure proposal creator cannot bypass minimum token requirement.
-
-// ---
-
-// This kind of DAO logic forms the basis of many real-world protocols like Compound, Aave, and Snapshot.
-// Let me know once you're done — and be ready for follow-ups like vote delegation or quorum-based execution.
-
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
