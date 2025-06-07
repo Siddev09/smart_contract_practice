@@ -70,7 +70,7 @@ contract multisig {
         ); // Check if the transaction has enough confirmations
         require(!transactions[txId].executed, "transaction already executed"); // Ensure the transaction hasn't been executed
 
-        // Execute the transaction logic here (e.g., using a low-level call)
+       
         transactions[txId].executed = true; // Mark the transaction as executed
     }
 }
