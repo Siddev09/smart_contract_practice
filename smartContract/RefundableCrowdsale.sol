@@ -1,12 +1,5 @@
-// Here's your next **smart contract challenge**, designed for **intermediate-level practice**. This one tests your **understanding of payments, withdrawal patterns, and ownership control** — often asked in interviews.
-
-// ---
-
-// ### 📦 Smart Contract: **Refundable Crowdsale**
-
-// #### 📘 Situation:
-
-// You are tasked to build a **Crowdsale** smart contract that accepts ETH from participants for a project. If the **goal** is reached by the **deadline**, the owner can withdraw the funds. Otherwise, contributors can **claim refunds**.
+// You are tasked to build a **Crowdsale** smart contract that accepts ETH from participants for a project.
+//If the **goal** is reached by the **deadline**, the owner can withdraw the funds. Otherwise, contributors can **claim refunds**.
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
